@@ -1,0 +1,7 @@
+<app-generic-table [displayedColumns]="displayedColumns"
+                    [columnNames]="columnNames"
+                   [dataSource]="dataSource"
+                   (edit)="openEditModal($event)"
+                   (delete)="openDeleteModal($event)"
+                   (add)="openAddModal()">
+</app-generic-table>

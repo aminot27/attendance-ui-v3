@@ -1,0 +1,28 @@
+<div class="parent-form-container">
+    <form [formGroup]="parentForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" formControlName="name">
+      </div>
+      <div>
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" formControlName="last_name">
+      </div>
+      <div>
+        <label for="gender">Gender</label>
+        <select id="gender" formControlName="gender">
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+        </select>
+      </div>
+      <div>
+        <label for="dni">DNI</label>
+        <input type="text" id="dni" formControlName="dni">
+      </div>
+      <div>
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" id="phoneNumber" formControlName="phone_number">
+      </div>
+      <button type="submit" [disabled]="!parentForm.valid">Submit</button>
+    </form>
+  </div>

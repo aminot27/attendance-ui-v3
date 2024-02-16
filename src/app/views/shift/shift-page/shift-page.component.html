@@ -1,0 +1,54 @@
+<div class="shift-form">
+  <form #shiftForm="ngForm" (ngSubmit)="addShift()">
+    <div class="form-row">
+      <h3 class="col-12">Información General del Turno</h3>
+      <div class="col-sm-6">
+        <label for="name">Nombre del Turno:</label>
+        <input type="text" id="name" class="form-control form-control-sm" [(ngModel)]="newShift.name" name="name" placeholder="Ej: Turno Matutino" required>
+      </div>
+      <div class="col-sm-3">
+        <label for="start_time">Turno Inicio:</label>
+        <input type="time" id="start_time" class="form-control form-control-sm" [(ngModel)]="newShift.start_time" name="start_time" required>
+      </div>
+      <div class="col-sm-3">
+        <label for="end_time">Turno Fin:</label>
+        <input type="time" id="end_time" class="form-control form-control-sm" [(ngModel)]="newShift.end_time" name="end_time" required>
+      </div>
+    </div>
+    
+    <div class="form-row">
+      <h3 class="col-12">Intervalos de Entrada</h3>
+      <div class="col-sm-3">
+        <label for="entry_start">Inicio Hora de Entrada:</label>
+        <input type="time" id="entry_start" class="form-control form-control-sm" [(ngModel)]="newShift.entry_start" name="entry_start">
+      </div>
+      <div class="col-sm-3">
+        <label for="entry_end">Fin Hora de Entrada:</label>
+        <input type="time" id="entry_end" class="form-control form-control-sm" [(ngModel)]="newShift.entry_end" name="entry_end">
+      </div>
+      <div class="col-sm-3">
+        <label for="early_until">Temprano hasta:</label>
+        <input type="time" id="early_until" class="form-control form-control-sm" [(ngModel)]="newShift.early_until" name="early_until">
+      </div>
+      <div class="col-sm-3">
+        <label for="late_until">Tarde hasta:</label>
+        <input type="time" id="late_until" class="form-control form-control-sm" [(ngModel)]="newShift.late_until" name="late_until">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <h3 class="col-12">Intervalos de Salida</h3>
+      <div class="col-sm-3">
+        <label for="leave_start">Inicio Hora de Salida:</label>
+        <input type="time" id="leave_start" class="form-control form-control-sm" [(ngModel)]="newShift.leave_start" name="leave_start">
+      </div>
+      <div class="col-sm-3">
+        <label for="leave_end">Fin Hora de Salida:</label>
+        <input type="time" id="leave_end" class="form-control form-control-sm" [(ngModel)]="newShift.leave_end" name="leave_end">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-sm btn-add-shift">Agregar Turno</button>
+  </form>
+</div>
+<app-shift-list></app-shift-list>

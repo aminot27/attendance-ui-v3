@@ -1,0 +1,42 @@
+<form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="name">Name</label>
+        <input id="name" formControlName="name" type="text">
+      </div>
+    
+      <div>
+        <label for="last_name">Last Name</label>
+        <input id="last_name" formControlName="last_name" type="text">
+      </div>
+    
+      <div>
+        <label for="gender">Gender</label>
+        <select formControlName="gender">
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+        </select>
+      </div>
+    
+      <div>
+        <label for="dni">DNI</label>
+        <input id="dni" formControlName="dni" type="text">
+      </div>
+    
+      <div>
+        <label for="phone_number">Phone Number</label>
+        <input id="phone_number" formControlName="phone_number" type="text">
+      </div>
+    <div>
+      <label for="parent">Parent</label>
+      <select id="parent" formControlName="parent">
+        <option *ngFor="let parent of parents" [value]="parent.id">{{ parent.name }}</option>
+      </select>
+    </div>
+    <div>
+      <label for="shift">Shift</label>
+      <select id="shift" formControlName="shift">
+        <option *ngFor="let shift of shifts" [value]="shift.id">{{ shift.name }}</option>
+      </select>
+    </div>
+    <button type="submit" [disabled]="!studentForm.valid">Submit</button>
+  </form>

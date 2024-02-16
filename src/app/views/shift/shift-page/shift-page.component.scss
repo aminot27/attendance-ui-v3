@@ -1,0 +1,57 @@
+.shift-form {
+  max-width: 800px; // Aumenta si es necesario para acomodar el diseño horizontal
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; // Asegura que los elementos estén alineados verticalmente
+    margin-bottom: 10px; // Reduce el espacio entre filas
+
+    .col-sm-6, .col-sm-3 {
+      padding-right: 5px; // Reduce el espacio entre campos
+      padding-left: 5px;
+    }
+
+    h3 {
+      width: 100%; // Asegura que el título ocupe toda la fila
+      margin-bottom: 15px; // Espacio después del título
+    }
+  }
+
+  label {
+    margin-bottom: 5px;
+    font-size: 0.9rem; // Reduce el tamaño de la fuente de las etiquetas
+  }
+
+  .form-control-sm {
+    height: calc(1.5em + 0.5rem + 2px); // Ajusta la altura de los campos
+    font-size: 0.9rem; // Reduce el tamaño de la fuente dentro de los campos
+  }
+
+  .btn-sm {
+    padding: 0.25rem 0.5rem; // Reduce el padding de los botones
+    font-size: 0.875rem; // Reduce el tamaño de la fuente de los botones
+    line-height: 1.5;
+    border-radius: 0.2rem; // Reduce el radio del borde de los botones
+  }
+}
+
+.shift-form {
+  // Tus otros estilos...
+
+  .btn-add-shift {
+    background-color: black; // Cambia el fondo a negro
+    color: white; // Cambia el texto a blanco para mejor contraste
+    padding: 10px 20px; // Ajusta el padding para darle más espacio
+    border-radius: 8px; // Hace los bordes más redondeados
+    border: 2px solid white; // Añade un borde blanco para destacarlo
+
+    &:hover {
+      background-color: #333; // Oscurece el botón al pasar el mouse
+      border-color: #f2f2f2; // Cambia el color del borde al pasar el mouse
+    }
+  }
+}
